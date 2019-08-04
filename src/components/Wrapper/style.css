@@ -16,6 +16,11 @@
   box-sizing: border-box;
   font-family: sans-serif;
 } 
+a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+}
 .navbar {
   background: #5133a4;
   min-height: 70px;
@@ -31,7 +36,7 @@
 ul {
   list-style-type: disc;
   display:table;
-    width:100%;
+  width:100%;
 }
 li {
   display: list-item;

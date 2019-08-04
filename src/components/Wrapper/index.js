@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Wrapper(props) {
+function Wrapper() {
   return <div className="wrapper">
     <nav className="navbar">
       <ul>
@@ -16,7 +16,6 @@ function Wrapper(props) {
         </li>
       </ul>
     </nav>
-    {props.children}
   </div>
 
 }
