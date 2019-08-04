@@ -11,3 +11,30 @@ img {
     box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
     cursor: pointer;
 }
+.card:hover {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate; 
+}
+@keyframes bgcolor {
+    0% {
+        background-color: #33a2a4
+    }
+
+    25% {
+        background-color: #337ba4
+    }
+
+    50% {
+        background-color: #334aa4
+    }
+
+    75% {
+        background-color: #4233a4
+    }
+
+    100% {
+        background-color: #5133a4
+    }
+}

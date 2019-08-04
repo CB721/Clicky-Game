@@ -6,6 +6,7 @@ function Footer() {
         <div className="bottom">
             Clicky Game!
     </div>
+    <span>Copyright &copy; 2019 Clint Brodar</span>
     </footer>
 }
 

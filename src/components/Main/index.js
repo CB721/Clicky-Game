@@ -3,31 +3,29 @@ import "./style.css";
 import Card from "../Card";
 import characters from "./characters.json";
 
-// change to class component to handle states
 // setState() this.state.name = Clint, this.setState({name:"Clint"})
 
 class Main extends Component {
-    // here = () => {
-    //     console.log("Here");
-    // }
     state = {
         characters
     };
 
+    characterCount = (id) => {
+        const characters = this.state.characters.filter(character => character.id !== id);
+        this.setState({characters});
+    };
+
     render() {
-        return <div className="container">
+        return <div onClick={this.characterCount} className="container">
             {this.state.characters.map(character => (
                 <Card
                     id={character.id}
+                    key={character.id}
                     image={character.image}
                 />
             ))}
-
-            {/* Populate with 12 cards - use map function */}
         </div>
     }
-
-
 }
 
 export default Main;
