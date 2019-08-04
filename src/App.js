@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { Component } from "react";
+import Wrapper from './components/Wrapper'
+
+class App extends Component {
+  render() {
+    return (
+      <Wrapper>
+
+      </Wrapper>
+    )
+  }
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
-  );
+
 }
 
 export default App;
