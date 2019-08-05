@@ -5,10 +5,15 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 
 class App extends Component {
+  state = {
+    score: 0,
+    topScore: 0
+  }
+
   render() {
     return (
       <div>
-        <Wrapper />
+        <Wrapper score={this.state.score} title={"Click an image to begin!"} topScore={this.state.topScore}/>
         <Header />
         <Main />
         <Footer />

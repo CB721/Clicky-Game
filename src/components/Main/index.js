@@ -7,7 +7,7 @@ import characters from "./characters.json";
 
 class Main extends Component {
     state = {
-        characters
+        characters,
     };
 
     characterCount = (id) => {
