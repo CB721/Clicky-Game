@@ -8,7 +8,7 @@ class App extends Component {
   state = {
     score: 0,
     topScore: 0
-  }
+  };
 
   render() {
     return (

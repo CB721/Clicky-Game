@@ -11,12 +11,13 @@ class Main extends Component {
     };
 
     characterCount = (id) => {
-        const characters = this.state.characters.filter(character => character.id !== id);
-        this.setState({characters});
+        console.log(id);
+        // const characters = this.state.characters.filter(character => character.id !== id);
+        // this.setState({characters});
     };
 
     render() {
-        return <div onClick={this.characterCount} className="container">
+        return <div onClick={this.characterCount(this.props.id)} className="container">
             {this.state.characters.map(character => (
                 <Card
                     id={character.id}
