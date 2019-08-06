@@ -11,7 +11,7 @@ class Main extends Component {
     };
 
     characterCount = (id) => {
-        console.log(id);
+        // console.log(id);
         // const characters = this.state.characters.filter(character => character.id !== id);
         // this.setState({characters});
     };

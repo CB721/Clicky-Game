@@ -10,4 +10,11 @@
     padding-bottom: 50px;
     width: 90%;
     margin: 0 auto;
+    -webkit-box-shadow: 0 50px 100px rgba(0,0,0,.16), 0 50px 100px rgba(0,0,0,.23);
+    box-shadow: 0 50px 100px rgba(0,0,0,.16), 0 50px 100px rgba(0,0,0,.23);
+}
+.container:hover {
+    
+    /* opacity: 0.8; */
+    background: #5133a4;
 }

@@ -11,6 +11,9 @@ img {
     box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
     cursor: pointer;
 }
+.card {
+    background: white;
+}
 .card:hover {
     -webkit-animation: bgcolor 20s infinite;
     animation: bgcolor 10s infinite;
