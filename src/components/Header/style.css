@@ -1,7 +1,9 @@
 .header {
   background-color: #2c323c;
-  /* background-image: url(../Header/Assets/Images/mario.jpg); */
-  background-repeat: repeat;
+  background-image: url(../Header/Assets/Images/mario.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
   color: #fff;
   min-height: 400px;
   padding: 180px 20px;
