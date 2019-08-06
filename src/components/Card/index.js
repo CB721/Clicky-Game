@@ -2,28 +2,28 @@ import React from "react";
 import "./style.css";
 
 function Card(props) {
-  const idArr = [];
-  // let score = 0;
+  let idArr = [];
+  let currentScore = 0;
 
-  const characterSelction = (id) => {
+  const characterSelction = (id, name) => {
     if (id === idArr[0]) {
-      alert("You lose!");
+      alert("You already picked " + name + "!\nTry again!");
       for (let i = 0; i < idArr.length; i++) {
-        idArr.pop(i);
+        idArr = [];
+        currentScore = 0;
       }
     } else {
-      // score += 1;
-      idArr.pop();
-      // console.log(idArr);
       idArr.push(id);
-      // console.log(score);
+      console.log(idArr);
+      currentScore += 1;
+      console.log(currentScore);
     }
   };
 
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={props.image} onClick={() => characterSelction(props.id)} />
+        <img alt={props.name} src={props.image} onClick={() => characterSelction(props.id, props.name)} />
       </div>
     </div>
   );

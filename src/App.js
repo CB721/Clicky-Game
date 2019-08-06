@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 
 class App extends Component {
   state = {
+    title: "Click an image to begin!",
     score: 0,
     topScore: 0
   };
@@ -13,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Wrapper score={this.state.score} title={"Click an image to begin!"} topScore={this.state.topScore}/>
+        <Wrapper score={this.state.score} title={this.state.title} topScore={this.state.topScore}/>
         <Header />
         <Main />
         <Footer />
