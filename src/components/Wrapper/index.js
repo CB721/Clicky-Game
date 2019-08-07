@@ -6,7 +6,7 @@ function Wrapper(props) {
     <nav className="navbar">
       <ul>
         <li className="brand">
-          <a href="/">Clicky Game</a>
+          <a href="/">Mario Memory</a>
         </li>
         <li className="title">
           {props.title}

@@ -5,12 +5,13 @@
   background-size: cover;
   background-position: top center;
   color: #fff;
-  min-height: 400px;
+  min-height: 300px;
   padding: 180px 20px;
   padding-bottom: 140px;
   text-align: center;
   display: block;
   width: 100%;
+  background-blend-mode: overlay;
 }
 .header h1 {
   margin: 0;

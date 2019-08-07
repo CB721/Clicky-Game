@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
     return <footer className="footer">
         <div className="bottom">
-            Clicky Game!
+            Mario Memory!
     </div>
     <span>Copyright &copy; 2019 Clint Brodar</span>
     </footer>
