@@ -5,7 +5,7 @@ function Card(props) {
   
 
   return (
-    <div className="card shake">
+    <div className="card">
       <div className="img-container">
         <img alt={props.name} src={props.image} onClick={() => props.characterSelection(props.id, props.name)} />
       </div>

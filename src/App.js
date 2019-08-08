@@ -13,6 +13,8 @@ class App extends Component {
     topScore: 0,
     idArr: [],
     characters,
+    shake: false,
+    titleFlash: false,
   };
 
   // when a character is clicked
@@ -20,8 +22,11 @@ class App extends Component {
     // check if id index is in array
     // if not, it will return -1
     if (this.state.idArr.indexOf(id) > -1) {
-      // if id is in array
-      alert("You already picked " + name + "!\nTry again!");
+      // shake main container
+      this.setState({shake: true});
+      // flash title yellow
+      this.setState({titleFlash: true});
+      this.setState({title: "You already picked " + name + "!"});
       // compare score with top score
       if (this.state.score > this.state.topScore) {
         var newTopScore = this.state.score;
@@ -29,9 +34,13 @@ class App extends Component {
       } else {
         this.setState({ idArr: [], score: 0 });
       }
-      // regardless of score/top score comparison, shuffle characters
+      // regardless of score/top score comparison
+      // shuffle characters
       let shuffled = this.shuffleArray(this.state.characters);
       this.setState({ characters: shuffled });
+      // turn off shake and title flash
+      this.setState({shake: false});
+      this.setState({titleFlash: false});
     } else {
       // shuffle characters
       let shuffled = this.shuffleArray(this.state.characters);
