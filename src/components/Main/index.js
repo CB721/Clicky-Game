@@ -10,7 +10,7 @@ class Main extends Component {
     }
 
     render() {
-        return <div className={"container " + (this.props.shake ? 'shake' : null)}>
+        return <div className="container">
             {this.props.characters.map(character => (
                 <Card
                     characterSelection={this.props.characterSelection}

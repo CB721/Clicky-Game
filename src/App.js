@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import characters from "./characters.json";
-// import Card from "./components/Card";
 
 class App extends Component {
   state = {
@@ -13,8 +12,8 @@ class App extends Component {
     topScore: 0,
     idArr: [],
     characters,
-    shake: false,
-    titleFlash: false,
+    // shake: false,
+    // titleFlash: false,
   };
 
   // when a character is clicked
@@ -23,9 +22,9 @@ class App extends Component {
     // if not, it will return -1
     if (this.state.idArr.indexOf(id) > -1) {
       // shake main container
-      this.setState({shake: true});
+      // this.setState({shake: true});
       // flash title yellow
-      this.setState({titleFlash: true});
+      // this.setState({titleFlash: true});
       this.setState({title: "You already picked " + name + "!"});
       // compare score with top score
       if (this.state.score > this.state.topScore) {
@@ -39,13 +38,13 @@ class App extends Component {
       let shuffled = this.shuffleArray(this.state.characters);
       this.setState({ characters: shuffled });
       // turn off shake and title flash
-      this.setState({shake: false});
-      this.setState({titleFlash: false});
+      // this.setState({shake: false});
+      // this.setState({titleFlash: false});
     } else {
       // shuffle characters
       let shuffled = this.shuffleArray(this.state.characters);
       // set to a new array
-      var newArr = this.state.idArr;
+      let newArr = this.state.idArr;
       // push the id into it
       newArr.push(id);
       // update page
@@ -56,9 +55,9 @@ class App extends Component {
   // shuffle characters
   shuffleArray(array) {
     let newArr = array;
-    for (var i = newArr.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = newArr[i];
+    for (let i = newArr.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      let temp = newArr[i];
       newArr[i] = newArr[j];
       newArr[j] = temp;
     }
