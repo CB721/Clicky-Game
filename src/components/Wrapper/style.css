@@ -44,6 +44,26 @@ li {
   display: list-item;
   text-align: -webkit-match-parent;
 }
+@keyframes color {
+    0% {
+        color: #0c09d9
+    }
+    30% {
+        color: #d2d909
+    }
+    60% {
+        color: #0c09d9
+    }
+    100% {
+        color: #d2d909
+    }
+}
+#color-flash {
+  -webkit-animation: color 20s;
+  animation: color 0.5s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; 
+}
 @media only screen and (max-width: 600px) {
   .brand {
     font-size:2.5vw;

@@ -6,7 +6,7 @@ function Footer() {
         <div className="bottom">
             Mario Memory!
     </div>
-    <span>Copyright &copy; 2019 Clint Brodar</span>
+        <span>Copyright &copy; 2019 Clint Brodar</span>
     </footer>
 }
 

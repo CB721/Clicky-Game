@@ -8,7 +8,7 @@ function Wrapper(props) {
         <li className="brand">
           <a href="/">Mario Memory</a>
         </li>
-        <li className="title">
+        <li className="title" id={props.titleFlash}>
           {props.title}
         </li>
         <li className="scores">
@@ -17,7 +17,6 @@ function Wrapper(props) {
       </ul>
     </nav>
   </div>
-
 }
 
 export default Wrapper;

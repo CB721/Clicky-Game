@@ -12,8 +12,8 @@ class App extends Component {
     topScore: 0,
     idArr: [],
     characters,
-    // shake: false,
-    // titleFlash: false,
+    shake: "",
+    titleFlash: "",
   };
 
   // when a character is clicked
@@ -22,13 +22,14 @@ class App extends Component {
     // if not, it will return -1
     if (this.state.idArr.indexOf(id) > -1) {
       // shake main container
-      // this.setState({shake: true});
+      this.setState({ shake: "shake" });
       // flash title yellow
+      this.setState({ titleFlash: "color-flash" })
       // this.setState({titleFlash: true});
-      this.setState({title: "You already picked " + name + "!"});
+      this.setState({ title: "You already picked " + name + "!" });
       // compare score with top score
       if (this.state.score > this.state.topScore) {
-        var newTopScore = this.state.score;
+        let newTopScore = this.state.score;
         this.setState({ idArr: [], score: 0, topScore: newTopScore });
       } else {
         this.setState({ idArr: [], score: 0 });
@@ -37,9 +38,6 @@ class App extends Component {
       // shuffle characters
       let shuffled = this.shuffleArray(this.state.characters);
       this.setState({ characters: shuffled });
-      // turn off shake and title flash
-      // this.setState({shake: false});
-      // this.setState({titleFlash: false});
     } else {
       // shuffle characters
       let shuffled = this.shuffleArray(this.state.characters);
@@ -48,7 +46,7 @@ class App extends Component {
       // push the id into it
       newArr.push(id);
       // update page
-      this.setState({ idArr: newArr, score: this.state.score + 1, characters: shuffled, title: "You Guessed Correctly!" });
+      this.setState({ idArr: newArr, score: this.state.score + 1, characters: shuffled, title: "You Guessed Correctly!", shake: "", titleFlash: "" });
     }
   };
 
@@ -67,9 +65,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Wrapper score={this.state.score} title={this.state.title} topScore={this.state.topScore} />
+        <Wrapper score={this.state.score} title={this.state.title} topScore={this.state.topScore} titleFlash={this.state.titleFlash} />
         <Header />
-        <Main characterSelection={this.characterSelection} characters={this.state.characters} shuffleArray={this.shuffleArray} />
+        <Main characterSelection={this.characterSelection} characters={this.state.characters} shuffleArray={this.shuffleArray} shake={this.state.shake} />
         <Footer />
       </div>
     )
