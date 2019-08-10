@@ -24,7 +24,7 @@ a {
   background-color: transparent;
 }
 .navbar {
-  background: #D90912;
+  background: rgb(24, 4, 205);
   min-height: 70px;
   position: fixed;
   width: 100%;
@@ -46,16 +46,16 @@ li {
 }
 @keyframes color {
     0% {
-        color: #0c09d9
+        color: #dcca03
     }
     30% {
-        color: #d2d909
+        color: #d91709
     }
     60% {
-        color: #0c09d9
+        color: #dcca03
     }
     100% {
-        color: #d2d909
+        color: #d91709
     }
 }
 #color-flash {

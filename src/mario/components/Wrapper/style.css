@@ -6,7 +6,7 @@
   align-content: flex-start;
   overflow: auto;
 }
-.navbar li {
+.navbar-sonic li {
   margin: auto;
   display: inline-block;
   padding: 26px 0;
@@ -23,7 +23,7 @@ a {
   text-decoration: none;
   background-color: transparent;
 }
-.navbar {
+.navbar-sonic {
   background: #D90912;
   min-height: 70px;
   position: fixed;

@@ -1,4 +1,4 @@
-img {
+#character-cards-sonic {
     display: block;
     background-size: cover;
     background-position: 50%;
@@ -10,9 +10,11 @@ img {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
     box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
     cursor: pointer;
+    max-width: 100%;
+    max-height: 100%;
 }
-img:hover {
-    background-color: #D90912;
+#character-cards-sonic:hover {
+    background-color: rgb(24, 4, 205);
     animation-iteration-count: 1s;
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
@@ -41,7 +43,7 @@ img:hover {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 @media only screen and (max-width: 600px) {
-    img {
+    #character-cards-sonic {
         height: 110px;
         width: 70px;
         background-size: cover;
@@ -49,7 +51,7 @@ img:hover {
     }
   } 
 @media only screen and (max-width: 695px) {
-    img {
+    #character-cards-sonic {
         height: 120px;
         width: 80px;
         background-size: cover;
@@ -57,7 +59,7 @@ img:hover {
     }
   } 
 @media only screen and (max-width: 750px) {
-    img {
+    #character-cards-sonic {
         height: 130px;
         width: 90px;
         background-size: cover;
@@ -65,7 +67,7 @@ img:hover {
     }
   } 
 @media only screen and (max-width: 800px) {
-    img {
+    #character-cards-sonic {
         height: 150px;
         width: 110px;
         background-size: cover;
@@ -73,11 +75,10 @@ img:hover {
     }
   } 
 @media only screen and (max-width: 1042px) {
-    img {
+    #character-cards-sonic {
         height: 170px;
         width: 130px;
         background-size: cover;
         background-position: 50%;
     }
   } 
-
