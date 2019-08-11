@@ -64,6 +64,29 @@ li {
   -webkit-animation-direction: alternate;
   animation-direction: alternate; 
 }
+@keyframes color {
+  0% {
+      color: #03dc03
+  }
+  25% {
+      color: #ffffff
+  }
+  50% {
+      color: #03dc03
+  }
+  75% {
+    color: #ffffff
+  }
+  100% {
+      color: #03dc03
+  }
+}
+#green-flash {
+  -webkit-animation: color 3s;
+  animation: color 3s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
 @media only screen and (max-width: 600px) {
   .brand {
     font-size:2.5vw;

@@ -5,7 +5,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import characters from "./characters.json";
 
-class App extends Component {
+class Mario extends Component {
   state = {
     title: "Click an image to begin!",
     score: 0,
@@ -39,14 +39,23 @@ class App extends Component {
       let shuffled = this.shuffleArray(this.state.characters);
       this.setState({ characters: shuffled });
     } else {
-      // shuffle characters
-      let shuffled = this.shuffleArray(this.state.characters);
-      // set to a new array
-      let newArr = this.state.idArr;
-      // push the id into it
-      newArr.push(id);
-      // update page
-      this.setState({ idArr: newArr, score: this.state.score + 1, characters: shuffled, title: "You Guessed Correctly!", shake: "", titleFlash: "" });
+      // player guesses all characters correctly
+      if (this.state.score > 10) {
+        let newTopScore = this.state.score;
+        // shuffle characters
+        let shuffled = this.shuffleArray(this.state.characters);
+        // display winner and reset game
+        this.setState({ title: "Winner!", score: 0, topScore: newTopScore + 1, idArr: [], characters: shuffled, titleFlash: "green-flash" });
+      } else if (this.state.score < 11) {
+        // shuffle characters
+        let shuffled = this.shuffleArray(this.state.characters);
+        // set to a new array
+        let newArr = this.state.idArr;
+        // push the id into it
+        newArr.push(id);
+        // update page
+        this.setState({ idArr: newArr, score: this.state.score + 1, characters: shuffled, title: "You Guessed Correctly!", shake: "", titleFlash: "" });
+      }
     }
   };
 
@@ -74,4 +83,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Mario;
